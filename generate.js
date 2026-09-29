@@ -30,7 +30,7 @@ for(let bKey in brands){
     let a = areas[aKey];
     let slug = `${bKey}-chimney-service-${aKey}`;
     let uniqueDiv = `<div class="mt-10 max-w-4xl text-[14px] leading-[1.9] text-zinc-700 space-y-4 bg-zinc-50 p-6 rounded-[20px] border"><h2 class="text-[20px] font-bold text-black">${b.name} Chimney Service in ${a.full} - ${a.pin}</h2><p><b>${b.name} chimney service in ${a.full}</b> near ${a.landmark} Pincode ${a.pin} since 2009. In ${a.full} ${b.homes} homes trust us. ${b.problem}. Technician reaches in 45 mins with genuine parts.</p><p>Why ${b.name} fails in ${a.full}? Oil choking due to frying in ${a.landmark} societies. We do chemical cleaning, motor, PCB repair at home. 90 days warranty in ${a.full}. Call 8796284796 for ${b.name} chimney service in ${a.full}.</p></div>`;
-    let newHtml = template.replace(/<title>.*?<\/title>/, `<title>${b.name} Chimney Service in ${a.full} | ${a.landmark} | ${a.pin} | Same Day</title>`).replace(/Chimney service repair not working solve in Noida Ghaziabad/g, `${b.name} chimney service in ${a.full}`);
+    let newHtml = template.replace(/<title>.*?<\/title>/, `<title>${b.name} Chimney Service in ${a.full} | ${a.landmark} | ${a.pin} | Same Day</title>`);
     let finalHtml = newHtml.replace('</main>', `${uniqueDiv}</main>`);
     if(finalHtml === newHtml) finalHtml = newHtml + uniqueDiv;
     fs.mkdirSync(slug,{recursive:true});
