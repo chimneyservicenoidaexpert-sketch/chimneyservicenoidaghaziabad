@@ -1,10 +1,16 @@
 name: Auto Generate 60 Pages
-on: [push]
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -13,5 +19,5 @@ jobs:
           git config user.name "auto-bot"
           git config user.email "bot@bot.com"
           git add.
-          git commit -m "auto generated 60 unique pages" || true
+          git commit -m "auto generated" || echo "no changes"
           git push
