@@ -1,60 +1,48 @@
 const fs = require('fs');
 const brands = ["faber","elica","kaff","glen","hindware","cata","gilma","hafele","siemens","smeg"];
 const areas = ["sector-50-noida","sector-18-noida","vaishali","indirapuram","vasundhara","greater-noida-west"];
-
-// Area ka pincode / landmark alag karne ke liye
-const areaInfo = {
-  "sector-50-noida": { pincode: "201301", landmark: "Near City Center Metro" },
-  "sector-18-noida": { pincode: "201301", landmark: "Near DLF Mall" },
-  "vaishali": { pincode: "201010", landmark: "Near Vaishali Metro" },
-  "indirapuram": { pincode: "201014", landmark: "Near Shipra Mall" },
-  "vasundhara": { pincode: "201012", landmark: "Near Vasundhara Sec-12" },
-  "greater-noida-west": { pincode: "201318", landmark: "Near Gaur Chowk" }
+const areaPin = {
+  "sector-50-noida":"201301","sector-18-noida":"201301","vaishali":"201010",
+  "indirapuram":"201014","vasundhara":"201012","greater-noida-west":"201318"
 };
 
-let html = fs.readFileSync('index.html','utf8');
+let baseHtml = fs.readFileSync('index.html','utf8');
 
 for (const b of brands) {
   for (const a of areas) {
-    const prettyBrand = b.charAt(0).toUpperCase() + b.slice(1);
-    const upperBrand = b.toUpperCase();
-    const prettyArea = a.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-    const upperArea = prettyArea.toUpperCase();
-    const info = areaInfo[a];
+    const PrettyBrand = b.charAt(0).toUpperCase() + b.slice(1);
+    const UPPER = b.toUpperCase();
+    const PrettyArea = a.replace(/-/g,' ').replace(/\b\w/g, l=>l.toUpperCase());
+    const UPPER_AREA = PrettyArea.toUpperCase();
     const dir = `${b}-chimney-service-${a}`;
     fs.mkdirSync(dir, {recursive:true});
 
-    let newHtml = html;
+    let h = baseHtml;
 
-    // 1. TITLE Tag - Sabse important for Google
-    newHtml = newHtml.replace(/<title>.*<\/title>/i, `<title>${prettyBrand} Chimney Service in ${prettyArea} ${info.pincode} | Same Day Repair | 15 Yrs Exp</title>`);
+    // TITLE - Unique
+    h = h.replace(/<title>.*?<\/title>/is, `<title>${PrettyBrand} Chimney Service in ${PrettyArea} ${areaPin[a]} | Same Day Repair</title>`);
+    
+    // LOGO - CHIMNEY ki jagah BRAND (Tera main point)
+    h = h.replace(/CHIMNEY\s*<\/span>\s*<span[^>]*>EXPERT/si, `${UPPER}</span><span> EXPERT`);
+    h = h.replace(/>CHIMNEY</g, `>${UPPER}<`);
+    h = h.replace(/CHIMNEY EXPERT/gi, `${UPPER} EXPERT`);
 
-    // 2. Meta Description
-    newHtml = newHtml.replace(/name="description" content=".*"/i, `name="description" content="Book ${prettyBrand} Chimney Service in ${prettyArea} ${info.landmark}. Same day repair, 90 days warranty. Call for ${prettyBrand} filter cleaning, noise & not working issue in ${prettyArea}."`);
+    // TOP BLACK BAR
+    h = h.replace(/15 YEARS EXPERIENCE.*?(Noida Ghaziabad|Indira.*?|Sector.*?|Vaishali|Vasundhara|Greater.*?)(.*?)<\/div>/is, `15 YEARS EXPERIENCE • SAME DAY SERVICE IN ${UPPER_AREA} • ${UPPER_AREA}</div>`);
+    
+    // MAIN H1 - Bada wala heading jo abhi nahi badal raha
+    h = h.replace(/Chimney service repair not working solve in Noida Ghaziabad/gi, `${PrettyBrand} Chimney Service in ${PrettyArea} - Same Day Repair`);
+    
+    // 15 YEARS EXPERIENCE IN NOIDA GHAZIABAD
+    h = h.replace(/15 YEARS EXPERIENCE IN NOIDA GHAZIABAD/gi, `15 YEARS EXPERIENCE IN ${UPPER_AREA}`);
 
-    // 3. Logo & Top Bars - 100% Unique
-    newHtml = newHtml.replace(/CHIMNEY EXPERT/g, `${upperBrand} EXPERT`);
-    newHtml = newHtml.replace(/KAFF|SIEMENS|HAFELE/g, upperBrand);
-    newHtml = newHtml.replace(/15 YEARS EXPERIENCE • SAME DAY SERVICE •/g, `15 YEARS EXPERIENCE • SAME DAY SERVICE IN ${upperArea} •`);
-    newHtml = newHtml.replace(/15 YEARS EXPERIENCE IN NOIDA GHAZIABAD/g, `15 YEARS EXPERIENCE IN ${upperArea}`);
-    newHtml = newHtml.replace(/NOIDA GHAZIABAD/g, upperArea);
-    newHtml = newHtml.replace(/INDIRAPURAM|VAISHALI/gi, prettyArea);
+    // Niche ka para - Unique banaya taki Google spam na mare
+    h = h.replace(/Looking for trusted.*?Trusted by 18000\+ Homes\./is, `Looking for trusted ${PrettyBrand} Chimney Service in ${PrettyArea} (${areaPin[a]})? We provide same day ${PrettyBrand} chimney deep cleaning, not working & noise solution in ${PrettyArea}. Trusted by 18000+ homes.`);
 
-    // 4. Main H1
-    newHtml = newHtml.replace(/Kaff Chimney Service in Indirapuram|Siemens Chimney Service in Vaishali|Hafele Chimney Service in Vaishali/gi, `${prettyBrand} Chimney Service in ${prettyArea}`);
+    // Elica Elica wala double bug fix
+    h = h.replace(new RegExp(`${PrettyBrand} ${PrettyBrand}`, 'g'), PrettyBrand);
 
-    // 5. Unique Paragraph - Har area ke liye alag content (Google Duplicate se bachega)
-    const uniquePara = `Looking for trusted ${prettyBrand} Chimney Service in ${prettyArea} (${info.pincode})? We are ${info.landmark} with 15 years exp. Specialized in ${prettyBrand} Chimney Deep Cleaning, Not Working & Noise Problem in ${prettyArea}. Trusted by 18000+ Homes.`;
-    newHtml = newHtml.replace(/Trusted by 18000\+ Homes.*Work Not Done/s, uniquePara);
-
-    // 6. Brand list hata ke sirf ek brand
-    newHtml = newHtml.replace(/Faber, Elica, Kaff, Glen, Hindware, Cata, Gilma, Hafele, Siemens, Smeg, Carysil/gi, prettyBrand);
-
-    // 7. Cards pe Brand
-    newHtml = newHtml.replace(/Chimney Deep Cleaning/g, `${prettyBrand} Chimney Deep Cleaning`);
-    newHtml = newHtml.replace(/Chimney Not Working/g, `${prettyBrand} Chimney Not Working`);
-
-    fs.writeFileSync(dir + "/index.html", newHtml);
+    fs.writeFileSync(`${dir}/index.html`, h);
   }
 }
-console.log("Done - 60 Unique Pages Generated");
+console.log('60 Unique Pages Generated Done!');
