@@ -6,18 +6,16 @@ permissions:
   contents: write
 jobs:
   build:
+    if: "!contains(github.event.head_commit.message, 'auto')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-node@v4
         with:
           node-version: 20
       - run: node generate.js
-      - run: |
-          git config user.name "auto-bot"
-          git config user.email "bot@bot.com"
-          git add.
-          git commit -m "auto generated" || echo "no changes"
-          git push
+      - run: git config user.name "bot"
+      - run: git config user.email "bot@bot.com"
+      - run: git add.
+      - run: git commit -m "auto generated pages" || echo "no changes"
+      - run: git push
