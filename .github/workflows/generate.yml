@@ -2,6 +2,8 @@ name: Generate 60 Pages
 on:
   push:
     branches: [main]
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,4 +17,5 @@ jobs:
           git config user.name "bot"
           git config user.email "bot@bot.com"
           git add.
-          git diff --quiet && git diff --staged --quiet || (git commit -m "auto generate 60 unique pages" && git push)
+          git commit -m "auto generate 60 unique pages" || echo "no changes"
+          git push
