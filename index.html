@@ -8,105 +8,107 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800;900&display=swap" rel="stylesheet">
 <style>
 *{font-family:'Inter',sans-serif}
+body{
+background:#f8f7f5;
+position:relative;
+overflow-x:hidden;
+}
+body::before{
+content:'';
+position:fixed;
+top:-10%; left:-10%;
+width:60%; height:50%;
+background: radial-gradient(circle at center, rgba(0,0,0,0.06) 0%, transparent 70%);
+filter: blur(40px);
+z-index:-1;
+}
+body::after{
+content:'';
+position:fixed;
+bottom:-10%; right:-10%;
+width:70%; height:60%;
+background: radial-gradient(circle at center, rgba(0,0,0,0.05) 0%, transparent 70%);
+filter: blur(50px);
+z-index:-1;
+}
 @keyframes softPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}.book-pulse{animation:softPulse 1.2s infinite}
 @keyframes callFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}.call-float{animation:callFloat 2s infinite}
 .typewriter::after{content:'|';animation:blink 1s infinite} @keyframes blink{50%{opacity:0}}
-.glass-box{
-background: rgba(255,255,255,0.75);
-backdrop-filter: blur(18px);
--webkit-backdrop-filter: blur(18px);
-border: 1px solid rgba(255,255,255,0.8);
-box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+.glass{
+background: rgba(255,255,255,0.72);
+backdrop-filter: blur(22px);
+-webkit-backdrop-filter: blur(22px);
+border:1px solid rgba(255,255,255,0.8);
+box-shadow:0 8px 32px rgba(0,0,0,0.06);
+}
+.glass-header{
+background: rgba(255,255,255,0.85);
+backdrop-filter: blur(24px);
+-webkit-backdrop-filter: blur(24px);
 }
 .glass-black{
-background: rgba(0,0,0,0.85);
-backdrop-filter: blur(18px);
--webkit-backdrop-filter: blur(18px);
-border: 1px solid rgba(255,255,255,0.1);
-box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+background: rgba(12,12,12,0.88);
+backdrop-filter: blur(22px);
+-webkit-backdrop-filter: blur(22px);
 }
 </style>
 </head>
-<body class="bg-[#f7f7f6] text-black">
+<body>
 
-<div class="bg-black text-white text-center text-[11px] tracking-[0.25em] py-2.5">15 YEARS EXPERIENCE • SAME DAY SERVICE</div>
+<div class="bg-black text-white text-center text-[11px] tracking-[0.3em] py-2.5">15 YEARS EXPERIENCE • SAME DAY SERVICE</div>
 
-<header class="max-w-6xl mx-auto px-5 h-[76px] flex justify-between items-center bg-white/80 backdrop-blur-xl sticky top-0 z-30 border-b">
-<div class="flex items-center gap-2.5"><div class="w-10 h-10 bg-zinc-100 rounded-full flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="48" rx="8" fill="#111"/><path d="M8 58 C8 48 18 48 18 48 L82 48 C82 48 92 48 92 58 L92 78 C92 88 82 88 82 88 L18 88 C8 88 8 78 8 78 Z" fill="#111"/></svg></div><div class="leading-none"><div class="font-black text-[15px]">CHIMNEY</div><div class="text-[10px] tracking-[0.35em] text-zinc-400">EXPERT • 15 YRS</div></div></div>
+<header class="max-w-6xl mx-auto px-5 h-[76px] flex justify-between items-center glass-header sticky top-0 z-30">
+<div class="flex items-center gap-2.5"><div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm"><svg width="20" height="20" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="48" rx="8" fill="#111"/><path d="M8 58 C8 48 18 48 18 48 L82 48 C82 48 92 48 92 58 L92 78 C92 88 82 88 82 88 L18 88 C8 88 8 78 8 78 Z" fill="#111"/></svg></div><div class="leading-none"><div class="font-black text-[15px]">CHIMNEY</div><div class="text-[10px] tracking-[0.35em] text-zinc-400">EXPERT • 15 YRS</div></div></div>
 <button id="topBookBtn" onclick="openForm('')" class="bg-black text-white px-7 py-3 rounded-full text-[13px] font-bold book-pulse">Book Now</button>
 </header>
 
 <main class="max-w-6xl mx-auto px-5 py-8">
-<div class="relative">
-<div class="inline-block bg-white/80 backdrop-blur text-[10px] tracking-[0.3em] px-3 py-1.5 rounded-full font-bold mb-4 border">TRUSTED SINCE 2009</div>
-<h1 class="text-[48px] md:text-[76px] font-black leading-[0.85] tracking-[-0.06em]">
+<!-- FIXED TITLE - NO OVERLAP -->
+<div class="glass rounded-[28px] p-6 md:p-8">
+<div class="inline-block bg-zinc-900 text-white text-[10px] tracking-[0.3em] px-4 py-1.5 rounded-full font-bold mb-5">TRUSTED SINCE 2009</div>
+<h1 class="text-[44px] md:text-[70px] font-black leading-[0.9] tracking-[-0.05em]">
 <span class="block">chimney</span>
-<span class="block font-light text-zinc-400 text-[38px] md:text-[58px] -mt-1">service repair</span>
-<span class="block font-light text-zinc-400 text-[38px] md:text-[58px] -mt-3">not working</span>
-<span class="block">solve in</span>
-<span class="block">Noida <span class="text-zinc-300">Ghaziabad</span></span>
+<span class="block font-light text-zinc-500 text-[36px] md:text-[56px] mt-1">service repair</span>
+<span class="block font-light text-zinc-500 text-[36px] md:text-[56px]">not working</span>
+<span class="block mt-2">solve in</span>
+<span class="block">Noida</span>
+<span class="block text-zinc-400">Ghaziabad</span>
 </h1>
-</div>
 
 <div class="mt-7 flex items-center gap-4">
-<div class="w-[80px] h-[80px] bg-white/80 backdrop-blur-xl rounded-[22px] flex items-center justify-center shadow-sm border border-white"><svg width="46" height="46" viewBox="0 0 100 100"><rect x="28" y="6" width="44" height="52" rx="10" fill="#111"/><path d="M6 60 C6 48 16 46 16 46 L84 46 C84 46 94 48 94 60 L94 82 C94 92 84 94 84 94 L16 94 C6 94 6 84 6 84 Z" fill="#111"/></svg></div>
-<div><div class="font-bold text-[16px]">15 YEARS EXPERIENCE IN NOIDA GHAZIABAD</div><div class="text-[12px] text-zinc-500 mt-1">Trusted by 18000+ Homes • Same Day Service</div></div>
+<div class="w-[84px] h-[84px] bg-white rounded-[22px] flex items-center justify-center shadow-sm border"><svg width="46" height="46" viewBox="0 0 100 100"><rect x="28" y="6" width="44" height="52" rx="10" fill="#111"/><path d="M6 60 C6 48 16 46 16 46 L84 46 C84 46 94 48 94 60 L94 82 C94 92 84 94 84 94 L16 94 C6 94 6 84 6 84 Z" fill="#111"/></svg></div>
+<div><div class="font-bold text-[15px]">15 YEARS EXPERIENCE IN NOIDA GHAZIABAD</div><div class="text-[12px] text-zinc-500 mt-1">Trusted by 18000+ Homes • Same Day Service</div></div>
 </div>
 
-<p id="typeText" class="mt-7 text-[20px] text-zinc-600 max-w-2xl leading-9 min-h-[110px] typewriter font-medium"></p>
-
-<!-- BLUR BACKGROUND BOXES -->
-<div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
-
-<div class="glass-box rounded-[28px] p-8">
-<div class="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center text-[11px] font-bold">01</div>
-<div class="font-bold text-[22px] mt-4">Chimney Deep Cleaning</div>
-<p class="text-[15px] text-zinc-500 mt-2 leading-7">Oil and carbon removal with chemical dip. Suction like new.</p>
-<button onclick="openForm('Deep Cleaning')" class="mt-6 text-[15px] font-bold border-b-2 border-black pb-1">Book Cleaning →</button>
+<p id="typeText" class="mt-7 text-[18px] md:text-[20px] text-zinc-600 max-w-2xl leading-8 min-h-[100px] typewriter font-medium"></p>
 </div>
 
-<div class="glass-box rounded-[28px] p-8">
-<div class="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center text-[11px] font-bold">02</div>
-<div class="font-bold text-[22px] mt-4">Chimney Not Working</div>
-<p class="text-[15px] text-zinc-500 mt-2 leading-7">Dead, PCB, touch, motor repair same day at home.</p>
-<button onclick="openForm('Repair')" class="mt-6 text-[15px] font-bold border-b-2 border-black pb-1">Fix Now →</button>
+<!-- BLUR BOXES -->
+<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="glass rounded-[28px] p-8"><div class="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center text-[11px] font-bold">01</div><div class="font-bold text-[21px] mt-4">Chimney Deep Cleaning</div><p class="text-[14px] text-zinc-500 mt-2 leading-6">Oil and carbon removal with chemical dip. Suction like new.</p><button onclick="openForm('Deep Cleaning')" class="mt-5 text-[14px] font-bold border-b-2 border-black">Book Cleaning →</button></div>
+<div class="glass rounded-[28px] p-8"><div class="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center text-[11px] font-bold">02</div><div class="font-bold text-[21px] mt-4">Chimney Not Working</div><p class="text-[14px] text-zinc-500 mt-2 leading-6">Dead, PCB, touch, motor repair same day at home.</p><button onclick="openForm('Repair')" class="mt-5 text-[14px] font-bold border-b-2 border-black">Fix Now →</button></div>
+<div class="glass rounded-[28px] p-8"><div class="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center text-[11px] font-bold">03</div><div class="font-bold text-[21px] mt-4">Chimney Noise Problem</div><p class="text-[14px] text-zinc-500 mt-2 leading-6">Bearing noise and vibration fixed with genuine parts.</p><button onclick="openForm('Noise Problem')" class="mt-5 text-[14px] font-bold border-b-2 border-black">Stop Noise →</button></div>
+<div class="glass-black text-white rounded-[28px] p-8"><div class="w-10 h-10 bg-white text-black rounded-full flex items-center justify-center text-[11px] font-bold">04</div><div class="font-bold text-[21px] mt-4">Chimney Installation</div><p class="text-[14px] text-white/70 mt-2 leading-6">New installation with ducting and core cutting work.</p><button onclick="openForm('Installation')" class="mt-5 text-[14px] font-bold border-b-2 border-white">Install Now →</button></div>
 </div>
 
-<div class="glass-box rounded-[28px] p-8">
-<div class="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center text-[11px] font-bold">03</div>
-<div class="font-bold text-[22px] mt-4">Chimney Noise Problem</div>
-<p class="text-[15px] text-zinc-500 mt-2 leading-7">Bearing noise and vibration fixed with genuine parts.</p>
-<button onclick="openForm('Noise Problem')" class="mt-6 text-[15px] font-bold border-b-2 border-black pb-1">Stop Noise →</button>
+<div class="mt-6 glass rounded-[32px] p-8 md:p-10 text-[15px] leading-8 text-zinc-600">
+<h2 class="text-[28px] font-black text-black">15 Years Experience - Complete Guide</h2>
+<p class="mt-3">With 15 years experience in Noida Ghaziabad, we know when, why and how chimney fails. Trusted by 18000+ homes.</p>
+<h3 class="mt-6 font-bold text-black">When Should You Get Service?</h3><p>Every 3-4 months normal cooking, every 2 months heavy frying. Signs: low suction, oil dripping, heavy noise.</p>
+<h3 class="mt-4 font-bold text-black">Why Does Chimney Stop Working?</h3><p>Oil choking in blower, PCB failure due to moisture, touch sensor water damage, motor bearing dry.</p>
+<h3 class="mt-4 font-bold text-black">Why Does Chimney Make Noise?</h3><p>Dry bearing, unbalanced blower, loose clamp, small bent duct. Fixed with high temperature grease.</p>
+<div class="mt-8 border-t border-zinc-200/50 pt-5"><p class="text-[11px] leading-5 text-zinc-400"><b>Disclaimer:</b> We are independent expert service provider with 15 years experience. We are NOT authorized service center of any brand. All brand names like Faber, Elica, Kaff, Glen, Cata, Gilma, Hafele, Siemens, Smeg, Carysil are used only for reference. We provide independent repair service with genuine parts and 90 days warranty.</p></div>
 </div>
 
-<div class="glass-black text-white rounded-[28px] p-8">
-<div class="w-10 h-10 bg-white text-black rounded-full flex items-center justify-center text-[11px] font-bold">04</div>
-<div class="font-bold text-[22px] mt-4">Chimney Installation</div>
-<p class="text-[15px] text-white/70 mt-2 leading-7">New installation with ducting and core cutting work.</p>
-<button onclick="openForm('Installation')" class="mt-6 text-[15px] font-bold text-white border-b-2 border-white pb-1">Install Now →</button>
-</div>
-
-</div>
-
-<div id="scrollTarget" class="mt-14 bg-white/80 backdrop-blur-xl border border-white rounded-[32px] p-8 md:p-12 text-[15px] leading-8 text-zinc-600 shadow-sm">
-<h2 class="text-[30px] font-black text-black">Chimney Service - 15 Years Expert Guide</h2>
-<p class="mt-4">With 15 years experience in Noida Ghaziabad, we know when, why and how chimney fails.</p>
-<h3 class="mt-8 font-bold text-black text-[19px]">When Should You Get Service?</h3><p class="mt-2">Every 3-4 months normal cooking, every 2 months heavy frying. Signs: low suction, oil dripping, heavy noise.</p>
-<h3 class="mt-6 font-bold text-black text-[19px]">Why Does Chimney Stop Working?</h3><p class="mt-2">Oil choking in blower, PCB failure due to moisture, touch sensor water damage, motor bearing dry due to heat and voltage fluctuation.</p>
-<h3 class="mt-6 font-bold text-black text-[19px]">Why Does Chimney Make Noise?</h3><p class="mt-2">Dry bearing grinding sound, unbalanced blower due to oil deposit one side, loose wall clamp vibration, small bent duct air pressure noise. Fixed with high temperature grease.</p>
-<h3 class="mt-6 font-bold text-black text-[19px]">Why Does Suction Become Low?</h3><p class="mt-2">Filter 70% blocked, auto clean only removes 40% oil. Our chemical dip removes 100% oil and suction becomes like new.</p>
-<div class="mt-8 border-t pt-6"><p class="text-[11px] leading-5 text-zinc-400"><b>Disclaimer:</b> We are an independent expert service provider with 15 years experience. We are NOT authorized service center of any brand. All brand names like Faber, Elica, Kaff, Glen, Cata, Gilma, Hafele, Siemens, Smeg, Carysil are used only for reference to help customers find service. We provide independent repair service with genuine parts and 90 days warranty.</p></div>
-</div>
-
-<div class="mt-6 bg-zinc-50 border rounded-[20px] p-4"><details><summary class="text-[11px] font-bold tracking-widest text-zinc-400 cursor-pointer">VIEW ALL AREAS (60 PAGES)</summary><div id="allLinks" class="mt-3 text-[10px] leading-7 text-zinc-400 h-[120px] overflow-y-auto"></div></details></div>
+<div class="mt-5 glass rounded-[20px] p-4"><details><summary class="text-[11px] font-bold tracking-widest text-zinc-500 cursor-pointer">VIEW ALL AREAS (60 PAGES)</summary><div id="allLinks" class="mt-3 text-[10px] leading-7 text-zinc-500 h-[120px] overflow-y-auto"></div></details></div>
 </main>
 
-<div id="bookingModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50 p-4 backdrop-blur-md">
-<div id="modalBox" class="bg-white rounded-[28px] w-full max-w-[400px] p-8 shadow-2xl relative">
+<div id="bookingModal" class="fixed inset-0 bg-black/40 backdrop-blur-[12px] hidden items-center justify-center z-50 p-4">
+<div id="modalBox" class="bg-white/90 backdrop-blur-2xl rounded-[28px] w-full max-w-[400px] p-8 shadow-2xl relative border border-white">
 <button onclick="closeForm()" class="absolute top-5 right-6 text-zinc-400">✕</button>
 <div class="text-[10px] tracking-widest text-zinc-400 font-bold">15 YEARS TRUSTED</div><div class="font-bold text-[22px] mt-2">Book Expert Visit</div>
 <select id="serviceType" class="mt-6 w-full border-2 border-black rounded-xl p-3.5 text-[14px] font-bold outline-none"><option value="">Select Service Type</option><option value="Repair">Repair</option><option value="Deep Cleaning">Deep Cleaning</option><option value="Noise Problem">Noise Problem</option><option value="Installation">Installation</option></select>
-<input id="custName" placeholder="Full Name" class="mt-3 w-full border rounded-xl p-3.5 text-[13px] bg-zinc-50 outline-none focus:border-black"><input id="custMobile" placeholder="Mobile Number" type="tel" maxlength="10" class="mt-3 w-full border rounded-xl p-3.5 text-[13px] bg-zinc-50 outline-none focus:border-black"><input id="custAddress" placeholder="Full Address" class="mt-3 w-full border rounded-xl p-3.5 text-[13px] bg-zinc-50 outline-none focus:border-black"><button onclick="submitBooking()" class="mt-5 w-full bg-black text-white py-3.5 rounded-xl text-[14px] font-bold">Confirm Booking</button>
+<input id="custName" placeholder="Full Name" class="mt-3 w-full border rounded-xl p-3.5 text-[13px] bg-white/70 backdrop-blur outline-none focus:border-black"><input id="custMobile" placeholder="Mobile Number" type="tel" maxlength="10" class="mt-3 w-full border rounded-xl p-3.5 text-[13px] bg-white/70 backdrop-blur outline-none focus:border-black"><input id="custAddress" placeholder="Full Address" class="mt-3 w-full border rounded-xl p-3.5 text-[13px] bg-white/70 backdrop-blur outline-none focus:border-black"><button onclick="submitBooking()" class="mt-5 w-full bg-black text-white py-3.5 rounded-xl text-[14px] font-bold">Confirm Booking</button>
 </div>
 </div>
 
@@ -114,14 +116,14 @@ box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 
 <script>
 const textToType="15 years experience in Noida Ghaziabad. We provide expert repair for not working, noise problem, low suction, deep cleaning and installation same day.";
-let i=0;function typeWriter(){if(i<textToType.length){document.getElementById('typeText').innerHTML+=textToType.charAt(i);i++;setTimeout(typeWriter,75);}}typeWriter();
-setTimeout(()=>{window.scrollBy({top:200, behavior:'smooth'});},4000);
+let i=0;function typeWriter(){if(i<textToType.length){document.getElementById('typeText').innerHTML+=textToType.charAt(i);i++;setTimeout(typeWriter,70);}}typeWriter();
+setTimeout(()=>{window.scrollBy({top:180, behavior:'smooth'});},4000);
 setInterval(()=>{let b=document.getElementById('topBookBtn');b.classList.remove('book-pulse');void b.offsetWidth;b.classList.add('book-pulse');},5000);
 setTimeout(()=>{openForm('');},9000);
 setInterval(()=>{if(document.getElementById('bookingModal').classList.contains('hidden')){openForm('');}},28000);
 function openForm(s){if(s)document.getElementById('serviceType').value=s;document.getElementById('bookingModal').classList.remove('hidden');document.getElementById('bookingModal').classList.add('flex');}
 function closeForm(){document.getElementById('bookingModal').classList.add('hidden');document.getElementById('bookingModal').classList.remove('flex');}
-function submitBooking(){let s=document.getElementById('serviceType').value,n=document.getElementById('custName').value.trim(),m=document.getElementById('custMobile').value.trim(),a=document.getElementById('custAddress').value.trim();if(!s){alert('Select service');return;}if(!n||!m||!a){alert('Fill all');return;}if(m.length<10){alert('Valid mobile');return;}let msg=`Service Request - Chimney Expert%0A%0AService Type: ${s}%0AName: ${n}%0AMobile: ${m}%0AAddress: ${a}%0APage: ${location.pathname.replace(/\//g,'')||'Home'}`;window.open(`https://wa.me/918796284796?text=${msg}`,'_blank');document.getElementById('modalBox').innerHTML=`<div class="text-center py-6"><div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto text-2xl">✓</div><div class="font-bold mt-4 text-xl">Booking Received</div><p class="text-[12px] text-zinc-500 mt-2">Thanks ${n}. Will call on ${m} in 5 mins.</p><button onclick="location.reload()" class="mt-6 bg-black text-white px-8 py-2.5 rounded-full text-xs">Close</button></div>`;}
+function submitBooking(){let s=document.getElementById('serviceType').value,n=document.getElementById('custName').value.trim(),m=document.getElementById('custMobile').value.trim(),a=document.getElementById('custAddress').value.trim();if(!s){alert('Select service');return;}if(!n||!m||!a){alert('Fill all');return;}if(m.length<10){alert('Valid mobile');return;}let msg=`Service Request%0A%0AService: ${s}%0AName: ${n}%0AMobile: ${m}%0AAddress: ${a}%0APage: ${location.pathname.replace(/\//g,'')||'Home'}`;window.open(`https://wa.me/918796284796?text=${msg}`,'_blank');document.getElementById('modalBox').innerHTML=`<div class="text-center py-6"><div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto text-2xl">✓</div><div class="font-bold mt-4 text-xl">Booking Received</div><p class="text-[12px] text-zinc-500 mt-2">Thanks ${n}. Will call on ${m} in 5 mins.</p><button onclick="location.reload()" class="mt-6 bg-black text-white px-8 py-2.5 rounded-full text-xs">Close</button></div>`;}
 let brands={smeg:"Smeg",siemens:"Siemens",hafele:"Hafele",carysil:"Carysil",faber:"Faber",elica:"Elica",kaff:"Kaff",cata:"Cata",gilma:"Gilma",glen:"Glen"};
 let areas={"sector-50-noida":"Sector 50 Noida","sector-18-noida":"Sector 18 Noida","vaishali":"Vaishali","indirapuram":"Indirapuram","vasundhara":"Vasundhara","greater-noida-west":"Greater Noida West"};
 let html="";for(let b in brands){for(let a in areas){html+=`<a href="/${b}-chimney-service-${a}" class="mr-2">${brands[b]} ${areas[a]}</a> `;}}document.getElementById('allLinks').innerHTML=html;
