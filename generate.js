@@ -1,24 +1,32 @@
 const fs = require('fs');
-
-// Purane galat folders delete karo
-const files = fs.readdirSync('.');
-files.forEach(f => {
-  if (f.includes('chimney-service') && fs.lstatSync(f).isDirectory()) {
-    fs.rmSync(f, { recursive: true, force: true });
-    console.log('Deleted folder: ' + f);
-  }
-});
-
 const brands = ["cata","elica","faber","gilma","glen","hafele","hindware","kaff","siemens","smeg"];
 const areas = ["greater-noida","indirapuram","sector-18-noida","sector-50-noida","vaishali","vasundhara"];
 
-brands.forEach(brand => {
-  areas.forEach(area => {
-    const fileName = `${brand}-chimney-service-${area}.html`;
-    const prettyArea = area.replace(/-/g, ' ').replace(/\b\w/g, l=>l.toUpperCase());
-    const prettyBrand = brand.charAt(0).toUpperCase() + brand.slice(1);
-    const html = `<!DOCTYPE html><html><head><title>${prettyBrand} Chimney Service in ${prettyArea}</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font-family:Arial;max-width:800px;margin:0 auto;padding:20px}h1{color:#d32f2f}.cta{background:#d32f2f;color:white;padding:12px 20px;text-decoration:none;border-radius:5px;display:inline-block}</style></head><body><h1>${prettyBrand} Chimney Service in ${prettyArea}</h1><p>Expert ${prettyBrand} chimney repair & service in ${prettyArea}.</p><a href="tel:9876543210" class="cta">Call 9876543210</a><p><a href="/index.html">Back to Home</a></p></body></html>`;
-    fs.writeFileSync(fileName, html);
-    console.log('Created FILE: ' + fileName);
-  });
-});
+const template = (prettyBrand, prettyArea) => `<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${prettyBrand} Chimney Service in ${prettyArea} - 9876543210</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Arial;color:#222}
+.top{background:#000;color:#fff;padding:12px;text-align:center;font-weight:bold}
+.hero{background:linear-gradient(135deg,#d32f2f,#b71c1c);color:#fff;padding:45px 20px;text-align:center}
+.hero h1{font-size:34px;margin-bottom:10px}.hero p{font-size:18px}
+.call{background:#fff;color:#d32f2f;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:bold;display:inline-block;margin-top:18px;font-size:18px}
+.box{max-width:900px;margin:auto;padding:20px}.card{border:1px solid #ddd;padding:20px;border-radius:12px;margin:18px 0;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+h2{color:#d32f2f;margin-bottom:8px}footer{background:#111;color:#ccc;text-align:center;padding:25px}
+</style></head><body>
+<div class="top">24x7 Chimney Service Noida Ghaziabad | Call 9876543210</div>
+<div class="hero"><h1>${prettyBrand} Chimney Service in ${prettyArea}</h1><p>Repair • Cleaning • Installation • AMC • Same Day Service</p><a class="call" href="tel:9876543210">📞 CALL 9876543210</a></div>
+<div class="box">
+<div class="card"><h2>🔧 ${prettyBrand} Services in ${prettyArea}</h2><p>✔ ${prettyBrand} Chimney Repair<br>✔ Deep Cleaning & Degreasing<br>✔ Motor, PCB, Filter Change<br>✔ New Installation & AMC</p></div>
+<div class="card"><h2>⭐ Why Us in ${prettyArea}?</h2><p>10+ Years Expert, Original Spare Parts, 90 Days Warranty, Same Day Doorstep Service in ${prettyArea}, Noida, Ghaziabad, Vaishali, Vasundhara, Indirapuram.</p></div>
+<div class="card" style="text-align:center"><h2>Book Your Service Today</h2><p>Technician will reach in 60 minutes</p><br><a href="tel:9876543210" style="background:#d32f2f;color:#fff;padding:16px 35px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:20px">BOOK NOW - 9876543210</a></div>
+</div>
+<footer>© 2026 ${prettyBrand} Chimney Service ${prettyArea} | <a href="/index.html" style="color:#fff">Home</a></footer>
+</body></html>`;
+
+brands.forEach(b=>{areas.forEach(a=>{
+  const file=`${b}-chimney-service-${a}.html`;
+  const PA=a.replace(/-/g,' ').replace(/\b\w/g,l=>l.toUpperCase());
+  const PB=b.charAt(0).toUpperCase()+b.slice(1);
+  fs.writeFileSync(file, template(PB,PA));
+})});
