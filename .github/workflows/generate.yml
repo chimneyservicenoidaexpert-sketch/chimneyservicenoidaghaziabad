@@ -12,8 +12,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - run: node generate.js
-      - run: |
+      - name: Generate Pages
+        run: node generate.js
+      - name: Commit Pages
+        run: |
           git config user.name "bot"
           git config user.email "bot@bot.com"
           git add.
