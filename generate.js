@@ -42,7 +42,7 @@ return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="v
 .call-btn{background:#00A651;color:#fff;animation:shake 1.4s infinite .35s}
 @keyframes shake{0%,100%{transform:translateY(0)}25%{transform:translateY(-4px)}50%{transform:translateY(0)}}
 </style></head><body>
-<div class="header"><div class="logo"><span>${PB.toUpperCase()}</span> CHIMNEY • ${PA} <span class="verified-plate">✔ Verified Service</span></div><a href="tel:${PHONE}" class="call-top" id="topCall">Call Now</a></div>
+<div class="header"><div class="logo"><span>${PB.toUpperCase()}</span> CHIMNEY • ${PA} <span class="verified-plate">✔ Verified Service</span></div><a href="tel:${PHONE}" class="call-top">Call Now</a></div>
 
 <div class="hero"><h1 id="mainTitle"></h1><p>Same Day Service • 60 Min Doorstep • 90 Days Warranty • ${PA}</p></div>
 
@@ -60,18 +60,14 @@ return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="v
 <input id="cAddr" placeholder="Full Address in ${PA}">
 <input id="cPin" placeholder="Pincode">
 <select id="cService"><option value="">Select Service Type</option><option>Noise Issue Repair</option><option>Deep Cleaning Service</option><option>Not Working / PCB Repair</option><option>Installation & Ducting</option><option>Low Suction / Oil Dripping</option><option>Motor Replacement</option></select>
-<button onclick="sendToWhatsApp('${PB}','${PA}')">Book Now on WhatsApp</button>
-<p style="text-align:center;font-size:10px;color:#888;margin-top:7px">Form sidha WhatsApp 8796284796 pe ayega</p>
+<button onclick="sendToWhatsApp('${PB}','${PA}')">Book Now</button>
 </div>
 
 <div class="content">
 <h2><span class="green">${PB}</span> Chimney Service in ${PA} - Trusted by 2100+ Families</h2>
 <p>If you are searching for reliable <b>${PB} Chimney Service in ${PA}</b>, your search ends here. We are local experts for ${PB} brand in ${PA} providing same day doorstep service in 60 minutes. Kitchens in ${PA} produce heavy oil, tadka, smoke which clogs ${PB} chimney filters within 3 months. That is why ${PB} chimneys in ${PA} need professional cleaning every 4 months. Our team in ${PA} has completed 2100+ ${PB} chimney services in societies like Gaur, ATS, Mahagun, and all apartments in ${PA}. We provide ${PB} chimney deep cleaning, noise issue fix, not working repair, low suction fix, oil dripping solution, auto-clean not working, touch panel repair, PCB repair, motor replacement for ${PB} in ${PA}.</p>
-
 <p><b>Common Problems we fix daily for ${PB} in ${PA}:</b> 1) ${PB} Chimney Making Loud Noise in ${PA} due to bearing jam and loose blower - we clean shaft and replace bearing for ${PB} in ${PA}. 2) ${PB} Chimney Not Starting in ${PA} due to PCB and touch sensor fault - we check power and replace PCB for ${PB} in ${PA}. 3) ${PB} Chimney Low Suction in ${PA} due to filter choked with oil and blower carbon - we do chemical wash and hot water cleaning for ${PB} in ${PA}. 4) ${PB} Chimney Oil Dripping in ${PA} - filter cleaning solves 90% cases for ${PB} in ${PA}. 5) ${PB} Chimney Auto Clean Not Working in ${PA} due to thermal sensor and oil collector full. Our process for ${PB} in ${PA} is simple: Free inspection in ${PA}, transparent estimate, same day repair with 90 days warranty and GST bill for ${PB} in ${PA}. We use original compatible spare parts for ${PB} in ${PA} and provide 90 days service warranty for ${PB} in ${PA}.</p>
-
 <p><b>Why Regular ${PB} Service Important in ${PA}?</b> ${PA} area has hard water, high humidity, voltage fluctuation which damages ${PB} motor. Carbon layer inside ${PB} blower reduces suction by 70% and increases electricity bill and kitchen becomes oily. Our 7-step deep cleaning for ${PB} in ${PA} includes: Step 1 chemical dip for ${PB} filters in ${PA}, Step 2 hot high-pressure wash, Step 3 blower dry cleaning, Step 4 motor shaft oiling, Step 5 oil collector cleaning, Step 6 suction RPM test, Step 7 body polish for ${PB} in ${PA}. Time taken 60 minutes in ${PA}. Result - suction like new for ${PB} in ${PA}. We are independent service provider for ${PB} in ${PA}, not authorized company service center, but we are faster, affordable and provide warranty for ${PB} in ${PA}. Book ${PB} chimney service in ${PA} now and get same day technician. ${PB} chimney service center in ${PA} alternative - we cover all ${PA}. ${PB} chimney cleaning, ${PB} chimney repair, ${PB} chimney installation in ${PA} available 7 days. Call ${PB} service in ${PA} now.</p>
-
 <p><b>${PB} Chimney Installation in ${PA}:</b> We also install new ${PB} chimney in ${PA} with proper ducting size 6 inch, correct height, no sharp bend for ${PB} in ${PA}. Proper installation increases life of ${PB} by 5 years in ${PA}. We provide installation for ${PB} in ${PA} for all kitchen types. ${PB} AMC available in ${PA} - 3 services per year for ${PB} in ${PA} with priority service.</p>
 </div>
 
@@ -90,7 +86,7 @@ return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="v
 
 <div class="disclaimer">⚠️ <b>Disclaimer:</b> We are an <b>Independent Service Provider</b> for ${PB} Chimney Service in ${PA}. We are NOT authorized service center of ${PB}. ${PB} is registered trademark of its respective owner. We provide paid after-warranty service in ${PA} on chargeable basis. All services in ${PA} for ${PB} come with GST bill and 90 days warranty. © 2026 ${PB} Service ${PA}.</div>
 
-<div id="modal" class="popup" onclick="this.classList.remove('show')"><div class="popup-box" onclick="event.stopPropagation()"><div id="mContent"></div><button onclick="document.getElementById('bookForm').scrollIntoView({behavior:'smooth'});document.getElementById('modal').classList.remove('show')" style="width:100%;padding:12px;background:#111;color:#fff;border:none;border-radius:10px;margin-top:12px;font-weight:700">Book Now on WhatsApp</button></div></div>
+<div id="modal" class="popup" onclick="this.classList.remove('show')"><div class="popup-box" onclick="event.stopPropagation()"><div id="mContent"></div><button onclick="document.getElementById('bookForm').scrollIntoView({behavior:'smooth'});document.getElementById('modal').classList.remove('show')" style="width:100%;padding:12px;background:#111;color:#fff;border:none;border-radius:10px;margin-top:12px;font-weight:700">Book Now</button></div></div>
 
 <div id="callPopup" class="popup"><div class="popup-box"><h3>Call ${PB} Service in ${PA}</h3><p style="font-size:12px;color:#666;margin-top:6px">Technician in ${PA} - 60 Min • Verified</p><a href="tel:${PHONE}">📞 Call Now - ${PHONE}</a><p style="font-size:12px;color:#888;margin-top:12px;cursor:pointer" onclick="document.getElementById('callPopup').classList.remove('show')">Close</p></div></div>
 
@@ -99,15 +95,32 @@ return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="v
 
 <script>
 const titles=["<span class=\\"green\\">${PB}</span> Chimney Service in ${PA}","<span class=\\"green\\">${PB}</span> Chimney Noise Issue Fixed","${PB} Repair <span class=\\"green\\">90 Days Warranty</span>"];
-let ti=0,ci=0;function typeTitle(){if(ti>=titles.length)ti=0;let t=titles[ti];let el=document.getElementById('mainTitle');if(ci<=t.length){el.innerHTML=t.substring(0,ci)+'<span class=\\"cursor\\">|</span>';ci++;setTimeout(typeTitle,32);}else{setTimeout(()=>{ci=0;ti++;typeTitle();},2200);}}typeTitle();
+let ti=0,ci=0;
+function typeTitle(){
+ if(ti>=titles.length)ti=0;
+ let t=titles[ti];
+ let el=document.getElementById('mainTitle');
+ if(ci<=t.length){
+   el.innerHTML=t.substring(0,ci)+'<span class="cursor">|</span>';
+   ci++;
+   setTimeout(typeTitle,80);
+ }else{
+   ci=0;ti++;
+   setTimeout(typeTitle,0);
+ }
+}
+typeTitle();
 setTimeout(()=>{document.getElementById('callPopup').classList.add('show');},5000);
-const num="${PHONE}";let nI=0;function typeNum(){let el=document.getElementById('topCall');if(nI<=num.length){el.innerText=num.substring(0,nI)||"Call Now";nI++;setTimeout(typeNum,150);}else{setTimeout(()=>{nI=0;el.innerText="Call Now";setTimeout(typeNum,1500);},3000);}}setTimeout(typeNum,4000);
 function openM(k){const d={clean:"<h3>🧹 Deep Cleaning for ${PB} in ${PA}</h3><p>7-step cleaning for ${PB} in ${PA} - filter chemical dip, hot wash, blower cleaning, motor oiling. Suction +90% for ${PB} in ${PA}.</p>",noise:"<h3>🔊 Noise Fix for ${PB} in ${PA}</h3><p>Bearing jam, loose fan. We clean shaft, replace bearing for ${PB} in ${PA}. 90 days warranty.</p>",repair:"<h3>🔧 Repair for ${PB} in ${PA}</h3><p>PCB fault, touch failure. Genuine part for ${PB} in ${PA}.</p>",suction:"<h3>💨 Low Suction for ${PB} in ${PA}</h3><p>Filter choke, motor slow. We clean filters and check RPM for ${PB} in ${PA}. 100% guarantee.</p>"};document.getElementById('mContent').innerHTML=d[k];document.getElementById('modal').classList.add('show');}
 function sendToWhatsApp(PB,PA){
-let name=document.getElementById('cName').value||"Not Given";
-let addr=document.getElementById('cAddr').value||"Not Given";
-let pin=document.getElementById('cPin').value||"Not Given";
-let serv=document.getElementById('cService').value||"Not Selected";
+let name=document.getElementById('cName').value.trim();
+let addr=document.getElementById('cAddr').value.trim();
+let pin=document.getElementById('cPin').value.trim();
+let serv=document.getElementById('cService').value;
+if(!name){alert("Please Enter Your Name");document.getElementById('cName').focus();return;}
+if(!addr){alert("Please Enter Full Address");document.getElementById('cAddr').focus();return;}
+if(!pin){alert("Please Enter Pincode");document.getElementById('cPin').focus();return;}
+if(!serv){alert("Please Select Service Type");document.getElementById('cService').focus();return;}
 let msg="*New Booking*%0A*Brand:* "+PB+"%0A*Area:* "+PA+"%0A*Name:* "+name+"%0A*Address:* "+addr+"%0A*Pincode:* "+pin+"%0A*Service:* "+serv;
 window.open("https://wa.me/${WA}?text="+msg,"_blank");
 }
