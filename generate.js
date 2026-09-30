@@ -4,7 +4,6 @@ const areas=["greater-noida","indirapuram","sector-18-noida","sector-50-noida","
 const PHONE="8796284796";
 const WA="918796284796";
 
-// Har Area ka content alag banega isse - Spam se bachega + Rank #1 ayega
 const areaData={
 "greater-noida":"Gaur Chowk, Pari Chowk, ATS Village, Cherry County, Panchsheel Green, Alpha 1, Beta 2",
 "indirapuram":"Aditya Mega City, Shipra Sun City, Jaipuria Greens, Gyan Khand, Niti Khand, Vaibhav Khand",
@@ -87,14 +86,14 @@ return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="v
 
 <div class="content">
 <h2><span class="green">${PB}</span> Chimney Service in ${PA} - Trusted by 2100+ Families in ${society}</h2>
-<p>If you are searching for reliable <b>${PB} Chimney Service in ${PA}</b>, your search ends here. We are local experts for ${PB} brand in ${PA} providing same day doorstep service in 60 minutes covering ${society}. Kitchens in ${PA} produce heavy oil, tadka, smoke which clogs ${PB} chimney filters within 3 months. That is why ${PB} chimneys in ${PA} need professional cleaning every 4 months. Our team in ${PA} has completed 2100+ ${PB} chimney services in societies like ${society} and all apartments in ${PA}. We provide ${PB} chimney deep cleaning, noise issue fix, not working repair, low suction fix, oil dripping solution, auto-clean not working, touch panel repair, PCB repair, motor replacement for ${PB} in ${PA}.</p>
-<p><b>Common Problems we fix daily for ${PB} in ${PA} - Local Cases from ${society}:</b> 1) ${PB} Chimney Making Loud Noise in ${PA} due to bearing jam and loose blower - we clean shaft and replace bearing for ${PB} in ${PA}. In ${society} flats, noise problem is more because duct length is high. 2) ${PB} Chimney Not Starting in ${PA} due to PCB and touch sensor fault - we check power and replace PCB for ${PB} in ${PA}. 3) ${PB} Chimney Low Suction in ${PA} due to filter choked with oil and blower carbon - we do chemical wash and hot water cleaning for ${PB} in ${PA}. 4) ${PB} Chimney Oil Dripping in ${PA} - filter cleaning solves 90% cases for ${PB} in ${PA}. 5) ${PB} Chimney Auto Clean Not Working in ${PA} due to thermal sensor and oil collector full in ${society} kitchens. Our process for ${PB} in ${PA} is simple: Free inspection in ${PA}, transparent estimate, same day repair with 90 days warranty and GST bill for ${PB} in ${PA}. We use original compatible spare parts for ${PB} in ${PA} and provide 90 days service warranty for ${PB} in ${PA}.</p>
-<p><b>Why Regular ${PB} Service Important in ${PA}?</b> ${PA} area has hard water, high humidity, voltage fluctuation which damages ${PB} motor. Carbon layer inside ${PB} blower reduces suction by 70% and increases electricity bill and kitchen becomes oily. Our 7-step deep cleaning for ${PB} in ${PA} includes: Step 1 chemical dip for ${PB} filters in ${PA}, Step 2 hot high-pressure wash, Step 3 blower dry cleaning, Step 4 motor shaft oiling, Step 5 oil collector cleaning, Step 6 suction RPM test, Step 7 body polish for ${PB} in ${PA}. Time taken 60 minutes in ${PA}. Result - suction like new for ${PB} in ${PA}. We are independent service provider for ${PB} in ${PA}, not authorized company service, but we are faster, affordable and provide warranty for ${PB} in ${PA}. Book ${PB} chimney service in ${PA} now and get same day technician in ${society}. ${PB} chimney service in ${PA} alternative - we cover all ${PA}. ${PB} chimney cleaning, ${PB} chimney repair, ${PB} chimney installation in ${PA} available 7 days. Call ${PB} service in ${PA} now.</p>
-<p><b>${PB} Chimney Installation in ${PA} - Expert in ${society}:</b> We also install new ${PB} chimney in ${PA} with proper ducting size 6 inch, correct height 26 inch from gas, no sharp bend for ${PB} in ${PA}. Proper installation increases life of ${PB} by 5 years in ${PA}. Flats in ${society} have false ceiling issue, we handle it with extra bracket for ${PB} in ${PA}. We provide installation for ${PB} in ${PA} for all kitchen types like L-shape, parallel in ${society}. ${PB} AMC available in ${PA} - 3 services per year for ${PB} in ${PA} with priority service in ${society}. ${PB} suction 1200m3, filter baffle, charcoal filter cleaning for ${PB} in ${PA} included. If you live in ${PA} specially ${society}, call us for ${PB} service now - 60 min doorstep.</p>
+<p>If you are searching for reliable <b>${PB} Chimney Service in ${PA}</b>, your search ends here. We are local experts for this brand in your area providing same day doorstep service in 60 minutes covering ${society}. Kitchens here produce heavy oil, tadka, smoke which clogs filters within 3 months. That is why chimneys here need professional cleaning every 4 months. Our team has completed 2100+ services in societies like ${society} and all nearby apartments. We provide deep cleaning, noise fix, not working repair, low suction fix, oil dripping solution, auto-clean and touch panel repair with genuine parts.</p>
+<p><b>Common Problems we fix daily - Local Cases from ${society}:</b> 1) Loud Noise due to bearing jam and loose blower - we clean shaft and replace bearing. In ${society} flats, this problem is more because duct length is high. 2) Chimney Not Starting due to PCB and touch sensor fault - we check power and replace PCB. 3) Low Suction due to filter choked with oil and blower carbon - we do chemical wash and hot water cleaning for this model. 4) Oil Dripping - filter cleaning solves 90% cases. 5) Auto Clean Not Working due to thermal sensor and oil collector full. Our process is simple: Free inspection, transparent estimate, same day repair with 90 days warranty and GST bill. We use original compatible spare parts and provide 90 days service warranty.</p>
+<p><b>Why Regular Service Important in ${PA}?</b> This area has hard water, high humidity, voltage fluctuation which damages the motor. Carbon layer inside blower reduces suction by 70% and increases electricity bill. Our 7-step deep cleaning includes: Step 1 chemical dip for filters, Step 2 hot high-pressure wash, Step 3 blower dry cleaning, Step 4 motor shaft oiling, Step 5 oil collector cleaning, Step 6 suction RPM test, Step 7 body polish. Time taken 60 minutes at your doorstep. Result - suction like new. We are independent service provider, not authorized company service, but we are faster, affordable and provide warranty. Book now and get same day technician in ${society}.</p>
+<p><b>${PB} Chimney Installation in ${PA} - Expert in ${society}:</b> We also install new chimneys with proper ducting size 6 inch, correct height 26 inch from gas, no sharp bend. Proper installation increases life by 5 years. Flats in ${society} have false ceiling issue, we handle it with extra bracket. We provide installation for all kitchen types like L-shape, parallel in ${society}. AMC available - 3 services per year with priority service. Suction 1200m3, baffle and charcoal filter cleaning included. If you live in ${PA} specially ${society}, call us now - 60 min doorstep.</p>
 </div>
 
 <div class="keywords">
-<span>${PB} Chimney Cleaning in ${PA}</span><span>${PB} Chimney Repair in ${PA}</span><span>${PB} Chimney Installation in ${PA}</span><span>${PB} Noise Fix in ${PA}</span><span>${PB} Service in ${PA}</span><span>${PB} Deep Cleaning in ${PA}</span><span>${PB} Service in ${society}</span>
+<span>${PB} Chimney Cleaning in ${PA}</span><span>${PB} Chimney Repair in ${PA}</span><span>Deep Cleaning in ${society}</span><span>Noise Fix in ${PA}</span><span>Service in ${society}</span>
 </div>
 
 <div class="map-box"><h3 style="font-size:14px;margin-bottom:8px">📍 We Serve in ${PA} - ${society} - Live Map</h3><iframe src="https://maps.google.com/maps?q=${areaSlug}+${PA}+${society}&z=13&output=embed" loading="lazy"></iframe></div>
@@ -109,7 +108,6 @@ return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="v
 <div style="height:75px"></div>
 
 <script>
-// 1. HERO SLIDESHOW ONLY - NO TYPEWRITER
 const titles=["<span class=\\"green\\">${PB}</span> Chimney Service in ${PA}","<span class=\\"green\\">${PB}</span> Chimney Noise Issue Fixed","${PB} Repair <span class=\\"green\\">90 Days Warranty</span>"];
 let ti=0;
 function showSlide(){
@@ -123,8 +121,6 @@ function showSlide(){
 }
 showSlide();
 setInterval(showSlide,2500);
-
-// 2. TYPEWRITER ON BOOK FORM ONLY
 const bookText="Book ${PB} Service in ${PA}";
 let bi=0;
 function typeBook(){
@@ -138,9 +134,8 @@ function typeBook(){
  }
 }
 typeBook();
-
 setTimeout(()=>{document.getElementById('callPopup').classList.add('show');},5000);
-function openM(k){const d={clean:"<h3>🧹 Deep Cleaning for ${PB} in ${PA}</h3><p>7-step cleaning for ${PB} in ${PA} near ${society} - filter chemical dip, hot wash.</p>",noise:"<h3>🔊 Noise Fix for ${PB} in ${PA}</h3><p>Bearing jam, loose fan. We clean shaft, replace bearing for ${PB} in ${PA} - ${society}. 90 days warranty.</p>",repair:"<h3>🔧 Repair for ${PB} in ${PA}</h3><p>PCB fault, touch failure. Genuine part for ${PB} in ${PA} - ${society}.</p>",suction:"<h3>💨 Low Suction for ${PB} in ${PA}</h3><p>Filter choke, motor slow. We clean filters and check RPM for ${PB} in ${PA} - ${society}.</p>"};document.getElementById('mContent').innerHTML=d[k];document.getElementById('modal').classList.add('show');}
+function openM(k){const d={clean:"<h3>🧹 Deep Cleaning for ${PB} in ${PA}</h3><p>7-step cleaning near ${society} - filter chemical dip, hot wash.</p>",noise:"<h3>🔊 Noise Fix for ${PB} in ${PA}</h3><p>Bearing jam, loose fan. We clean shaft, replace bearing - ${society}. 90 days warranty.</p>",repair:"<h3>🔧 Repair for ${PB} in ${PA}</h3><p>PCB fault, touch failure. Genuine part - ${society}.</p>",suction:"<h3>💨 Low Suction for ${PB} in ${PA}</h3><p>Filter choke, motor slow. We clean filters and check RPM - ${society}.</p>"};document.getElementById('mContent').innerHTML=d[k];document.getElementById('modal').classList.add('show');}
 function sendToWhatsApp(PB,PA){
 let name=document.getElementById('cName').value.trim();
 let addr=document.getElementById('cAddr').value.trim();
@@ -148,7 +143,7 @@ let pin=document.getElementById('cPin').value.trim();
 let serv=document.getElementById('cService').value;
 if(!name){alert("Please Enter Your Name");document.getElementById('cName').focus();return;}
 if(!addr){alert("Please Enter Full Address");document.getElementById('cAddr').focus();return;}
-if(!pin){alert("Please Enter Pincode");document.getElementById('cPin').focus();return;}
+if(!pin){alert("Please Enter Pincode");document.getElementById('cPin').value.trim();document.getElementById('cPin').focus();return;}
 if(!serv){alert("Please Select Service Type");document.getElementById('cService').focus();return;}
 let msg="*New Booking*%0A*Brand:* "+PB+"%0A*Area:* "+PA+"%0A*Society:* ${society}%0A*Name:* "+name+"%0A*Address:* "+addr+"%0A*Pincode:* "+pin+"%0A*Service:* "+serv;
 window.open("https://wa.me/${WA}?text="+msg,"_blank");
@@ -161,4 +156,4 @@ const PA=a.replace(/-/g,' ').replace(/\b\w/g,l=>l.toUpperCase());
 const PB=b.charAt(0).toUpperCase()+b.slice(1);
 fs.writeFileSync(b+"-chimney-service-"+a+".html",makeHTML(PB,PA,a));
 });});
-console.log("Done 60 pages Google-Safe #1 Rank Ready");
+console.log("Done 60 pages Google-Safe #1 Rank Ready - Keyword 7x Fixed");
