@@ -4,6 +4,10 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chimney Service Repair Not Working Solve in Noida Ghaziabad | 15 Years Expert</title>
 <meta name="description" content="15 Years Experience in Chimney Service, Repair, Deep Cleaning, Noise Problem & Installation in Noida Ghaziabad. Same Day Service, 90 Days Warranty.">
+<link rel="canonical" href="https://chimneyservicenoidaghaziabad.vercel.app/">
+<meta property="og:title" content="Chimney Service Repair in Noida Ghaziabad | 15 Years Expert">
+<meta property="og:description" content="15 Years Experience in Chimney Service, Repair, Deep Cleaning in Noida Ghaziabad. Same Day Service, 90 Days Warranty.">
+<meta property="og:url" content="https://chimneyservicenoidaghaziabad.vercel.app/">
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 <style>
@@ -30,7 +34,6 @@ body{background:#f6f3ef}
 Chimney service repair not working solve in Noida Ghaziabad
 </h1>
 
-<!-- 2 CHIMNEY ICONS SIDE BY SIDE - KHALI JAGAH BHAR DI -->
 <div class="mt-10 flex flex-col md:flex-row items-start md:items-center gap-6">
 <div class="flex gap-4">
 <div class="w-[120px] h-[120px] md:w-[140px] md:h-[140px] bg-white rounded-[28px] flex items-center justify-center shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-zinc-100 shrink-0">
@@ -89,7 +92,7 @@ Chimney service repair not working solve in Noida Ghaziabad
 <div class="max-w-7xl mx-auto px-5 md:px-10 py-6">
 <div class="flex items-center gap-3"><div class="text-[9px] font-black tracking-[0.2em] text-zinc-400">SERVICE AREAS • 60 PAGES</div><div class="h-px flex-1 bg-zinc-100"></div><div class="text-[8px] bg-zinc-900 text-white px-2.5 py-1 rounded-full">10x6</div></div>
 <div id="allLinks" class="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-[9px] leading-5 text-zinc-400"></div>
-<div class="mt-6 text-[10px] text-zinc-400 border-t border-zinc-100 pt-4">© 2026 Chimney Expert • 15 Years Experience • Independent Service Provider</div>
+<div class="mt-6 text-[10px] text-zinc-400 border-t border-zinc-100 pt-4">© 2026 Chimney Expert • 15 Years Experience • Independent Service Provider | <a href="/sitemap.xml" class="underline">Sitemap</a></div>
 </div>
 </div>
 
@@ -115,9 +118,10 @@ function closeForm(){document.getElementById('bookingModal').classList.add('hidd
 (function(){if(sessionStorage.getItem('popupShown')) return;setTimeout(()=>{if(!sessionStorage.getItem('popupShown')){openForm('');sessionStorage.setItem('popupShown','1');}},6000);})();
 function submitBooking(){let s=document.getElementById('serviceType').value,n=document.getElementById('custName').value.trim(),m=document.getElementById('custMobile').value.trim(),a=document.getElementById('custAddress').value.trim();if(!s||!n||!m||!a){alert('Fill all fields');return;}if(m.length<10){alert('Enter valid mobile');return;}window.open(`https://wa.me/918796284796?text=Service:%20${s}%0AName:%20${n}%0AMobile:%20${m}%0AAddress:%20${a}`,'_blank');}
 function submitBookingPopup(){let s=document.getElementById('serviceType2').value,n=document.getElementById('custName2').value.trim(),m=document.getElementById('custMobile2').value.trim(),a=document.getElementById('custAddress2').value.trim();if(!s||!n||!m||!a){alert('Fill all fields');return;}if(m.length<10){alert('Enter valid mobile');return;}window.open(`https://wa.me/918796284796?text=Service:%20${s}%0AName:%20${n}%0AMobile:%20${m}%0AAddress:%20${a}`,'_blank');closeForm();}
+// FIXED - 60 PAGES LINKS WITH.HTML
 let brands={faber:"Faber",elica:"Elica",kaff:"Kaff",glen:"Glen",hindware:"Hindware",cata:"Cata",gilma:"Gilma",hafele:"Hafele",siemens:"Siemens",smeg:"Smeg"};
-let areas={"sector-50-noida":"Sec-50 Noida","sector-18-noida":"Sec-18 Noida","vaishali":"Vaishali","indirapuram":"Indirapuram","vasundhara":"Vasundhara","greater-noida-west":"Gr. Noida West"};
-let html="";for(let b in brands){for(let a in areas){html+=`<a href="/${b}-chimney-service-${a}" class="hover:text-black transition"> ${brands[b]} ${areas[a]} •</a>`;}}
+let areas={"sector-50-noida":"Sec-50 Noida","sector-18-noida":"Sec-18 Noida","vaishali":"Vaishali","indirapuram":"Indirapuram","vasundhara":"Vasundhara","greater-noida":"Gr. Noida"};
+let html="";for(let b in brands){for(let a in areas){html+=`<a href="/${b}-chimney-service-${a}.html" class="hover:text-black transition"> ${brands[b]} ${areas[a]} •</a>`;}}
 document.getElementById('allLinks').innerHTML=html;
 </script>
 </body>
