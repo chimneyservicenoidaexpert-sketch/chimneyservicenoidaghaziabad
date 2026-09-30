@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://chimneyservicenoidaghaziabad.vercel.app/sitemap.xml
