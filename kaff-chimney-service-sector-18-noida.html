@@ -1,22 +1,24 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kaff Chimney Service in sector 18 noida | Same Day Repair 90 Days Warranty</title>
+<title>Kaff Chimney Service in sector 18 noida - 60 Min Service</title>
 <meta name="description" content="Kaff Chimney Service in sector 18 noida - Same Day 60 Min Doorstep Repair, Cleaning, Installation. 2100+ Homes Trust Us in sector 18 noida.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Arial;background:#fff;color:#111;line-height:1.6}
 .header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);display:flex;justify-content:space-between;align-items:center;padding:11px 14px;border-bottom:1px solid #eee}
-.logo{font-weight:900;font-size:13px;display:flex;align-items:center;gap:6px}.logo span{color:#00A651}
+.logo{font-weight:900;font-size:13px;display:flex;align-items:center;gap:7px}.logo span{color:#00A651}
+.logo-icon{width:28px;height:28px;background:#111;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff}
 .verified-plate{background:#e8f5e9;border:1px solid #a5d6a7;color:#2e7d32;padding:3px 8px;border-radius:100px;font-size:10px;font-weight:800;display:flex;align-items:center;gap:3px}
 .call-top{background:#111;color:#fff;padding:8px 15px;border-radius:100px;text-decoration:none;font-size:12px;font-weight:700;min-width:95px;text-align:center}
 .hero{position:relative;padding:40px 20px 30px;text-align:center;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=1000') center/cover;filter:blur(18px);opacity:.3;z-index:-1}
-.hero h1{font-size:34px;font-weight:900;line-height:1.1;min-height:90px;letter-spacing:-.5px}.green{color:#00A651}.cursor{animation:blink 1s infinite}@keyframes blink{50%{opacity:0}}
+.hero h1{font-size:34px;font-weight:900;line-height:1.1;min-height:90px;letter-spacing:-.5px;transition:opacity .5s ease}.green{color:#00A651}
+.cursor{animation:blink 1s infinite}@keyframes blink{50%{opacity:0}}
 .hero p{font-size:13px;color:#555;margin-top:10px;font-weight:600}
 .grid{max-width:700px;margin:18px auto;padding:0 14px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .card{background:#fff;border:1px solid #eee;border-radius:16px;padding:14px;cursor:pointer;transition:.2s}.card:active{transform:scale(.97)}
 .card .icon{width:40px;height:40px;background:#FFF3E0;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:7px}
 .card h3{font-size:13px;font-weight:800}.card p{font-size:10px;color:#ff6d00;font-weight:700;margin-top:2px}
 .form-box{background:#f9fafb;border:1px solid #e5e7eb;border-radius:22px;padding:20px;max-width:430px;margin:20px auto;box-shadow:0 4px 20px rgba(0,0,0,.04)}
-.form-box h3{text-align:center;font-size:17px;margin-bottom:4px}.form-box .sub{ text-align:center;font-size:11px;color:#888;margin-bottom:12px}
+.form-box h3{text-align:center;font-size:17px;margin-bottom:4px;min-height:26px}.form-box .sub{ text-align:center;font-size:11px;color:#888;margin-bottom:12px}
 .form-box input,.form-box select{width:100%;padding:13px;border:1px solid #e5e5e5;border-radius:12px;margin:6px 0;background:#fff;font-size:14px}
 .form-box button{width:100%;padding:14px;background:#111;color:#fff;border:none;border-radius:12px;font-weight:800;margin-top:8px;font-size:14px}
 .content{max-width:750px;margin:22px auto;padding:0 18px}.content h2{font-size:20px;font-weight:800;margin:24px 0 10px}.content p{font-size:14px;color:#333;margin-bottom:12px;line-height:1.8;text-align:justify}
@@ -35,7 +37,7 @@
 .call-btn{background:#00A651;color:#fff;animation:shake 1.4s infinite .35s}
 @keyframes shake{0%,100%{transform:translateY(0)}25%{transform:translateY(-4px)}50%{transform:translateY(0)}}
 </style></head><body>
-<div class="header"><div class="logo"><span>KAFF</span> CHIMNEY • sector 18 noida <span class="verified-plate">✔ Verified Service</span></div><a href="tel:8796284796" class="call-top">Call Now</a></div>
+<div class="header"><div class="logo"><div class="logo-icon">⌾</div><div><span>KAFF</span> CHIMNEY • sector 18 noida</div> <span class="verified-plate">✔ Verified Service</span></div><a href="tel:8796284796" class="call-top">Call Now</a></div>
 
 <div class="hero"><h1 id="mainTitle"></h1><p>Same Day Service • 60 Min Doorstep • 90 Days Warranty • sector 18 noida</p></div>
 
@@ -47,7 +49,7 @@
 </div>
 
 <div class="form-box" id="bookForm">
-<h3>Book Kaff Service in sector 18 noida</h3>
+<h3 id="bookTitle"></h3>
 <div class="sub">iPhone style booking - Technician in sector 18 noida in 60 mins</div>
 <input id="cName" placeholder="Your Name">
 <input id="cAddr" placeholder="Full Address in sector 18 noida">
@@ -87,22 +89,37 @@
 <div style="height:75px"></div>
 
 <script>
+// 1. HERO SLIDESHOW ONLY - NO TYPEWRITER
 const titles=["<span class=\"green\">Kaff</span> Chimney Service in sector 18 noida","<span class=\"green\">Kaff</span> Chimney Noise Issue Fixed","Kaff Repair <span class=\"green\">90 Days Warranty</span>"];
-let ti=0,ci=0;
-function typeTitle(){
- if(ti>=titles.length)ti=0;
- let t=titles[ti];
+let ti=0;
+function showSlide(){
  let el=document.getElementById('mainTitle');
- if(ci<=t.length){
-   el.innerHTML=t.substring(0,ci)+'<span class="cursor">|</span>';
-   ci++;
-   setTimeout(typeTitle,80);
+ el.style.opacity=0;
+ setTimeout(()=>{
+   el.innerHTML=titles[ti];
+   el.style.opacity=1;
+   ti=(ti+1)%titles.length;
+ },300);
+}
+showSlide();
+setInterval(showSlide,2500);
+
+// 2. TYPEWRITER ON BOOK FORM ONLY
+const bookText="Book Kaff Service in sector 18 noida";
+let bi=0;
+function typeBook(){
+ let el=document.getElementById('bookTitle');
+ if(bi<=bookText.length){
+   el.innerHTML=bookText.substring(0,bi)+'<span class="cursor">|</span>';
+   bi++;
+   setTimeout(typeBook,80);
  }else{
-   ci=0;ti++;
-   setTimeout(typeTitle,0);
+   // turant restart nahi, 2 sec ruk ke phir se type
+   setTimeout(()=>{bi=0;typeBook();},2000);
  }
 }
-typeTitle();
+typeBook();
+
 setTimeout(()=>{document.getElementById('callPopup').classList.add('show');},5000);
 function openM(k){const d={clean:"<h3>🧹 Deep Cleaning for Kaff in sector 18 noida</h3><p>7-step cleaning for Kaff in sector 18 noida - filter chemical dip, hot wash, blower cleaning, motor oiling. Suction +90% for Kaff in sector 18 noida.</p>",noise:"<h3>🔊 Noise Fix for Kaff in sector 18 noida</h3><p>Bearing jam, loose fan. We clean shaft, replace bearing for Kaff in sector 18 noida. 90 days warranty.</p>",repair:"<h3>🔧 Repair for Kaff in sector 18 noida</h3><p>PCB fault, touch failure. Genuine part for Kaff in sector 18 noida.</p>",suction:"<h3>💨 Low Suction for Kaff in sector 18 noida</h3><p>Filter choke, motor slow. We clean filters and check RPM for Kaff in sector 18 noida. 100% guarantee.</p>"};document.getElementById('mContent').innerHTML=d[k];document.getElementById('modal').classList.add('show');}
 function sendToWhatsApp(PB,PA){
