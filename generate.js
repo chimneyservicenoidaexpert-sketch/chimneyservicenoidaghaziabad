@@ -76,7 +76,7 @@ return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="v
 
 <div class="form-box" id="bookForm">
 <h3 id="bookTitle"></h3>
-<div class="sub">iPhone style booking - Technician in ${PA} in 60 mins - ${society}</div>
+<div class="sub">Technician in ${PA} in 60 mins - ${society}</div>
 <input id="cName" placeholder="Your Name">
 <input id="cAddr" placeholder="Full Address in ${PA}">
 <input id="cPin" placeholder="Pincode">
