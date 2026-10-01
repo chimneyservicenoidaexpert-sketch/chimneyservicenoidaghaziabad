@@ -93,7 +93,7 @@ return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="v
 </div>
 
 <div class="keywords">
-<span>${PB} Chimney Cleaning in ${PA}</span><span>${PB} Chimney Repair in ${PA}</span><span>Deep Cleaning in ${society}</span><span>Noise Fix in ${PA}</span><span>Service in ${society}</span>
+<span>${PB} Chimney Cleaning in ${PA}</span><span>${PB} Chimney Repair in ${PA}</span><span>Deep Cleaning in ${PA}</span><span>Noise Fix in ${PA}</span><span>Chimney Service in ${PA}</span>
 </div>
 
 <div class="map-box"><h3 style="font-size:14px;margin-bottom:8px">📍 We Serve in ${PA} - ${society} - Live Map</h3><iframe src="https://maps.google.com/maps?q=${areaSlug}+${PA}+${society}&z=13&output=embed" loading="lazy"></iframe></div>
