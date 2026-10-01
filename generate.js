@@ -14,7 +14,7 @@ const areaData={
 };
 
 function makeHTML(PB,PA,areaSlug){
-const seoTitle = `${PB} Chimney Service ${PA}`;
+const seoTitle = `${PB} Chimney Service in ${PA} | Same Day Service @299`;
 const society = areaData[areaSlug];
 const seoDesc = `${PB} Chimney Service in ${PA} - Same Day 60 Min Doorstep Repair in ${society}. 2100+ Homes Trust Us in ${PA}. Call ${PHONE}.`;
 return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
