@@ -13,23 +13,19 @@ const areaData={
 "vasundhara":"Sector 12-15, Ramprastha, Mohan Nagar, Rajendra Nagar, Kaushambi, Sahibabad"
 };
 
-// Area ko Sec 50 Noida jaisa short dikhane ke liye
-function prettyArea(a){
-  return a.replace("sector-50-noida","Sec 50 Noida")
-          .replace("sector-18-noida","Sec 18 Noida")
-          .replace("greater-noida","Greater Noida")
-          .replace("indirapuram","Indirapuram Ghaziabad")
-          .replace("vaishali","Vaishali Ghaziabad")
-          .replace("vasundhara","Vasundhara Ghaziabad")
-          .replace(/-/g,' ')
-          .replace(/\b\w/g,l=>l.toUpperCase())
-          .replace("Sec 50 Noida","Sec 50 Noida").replace("Sec 18 Noida","Sec 18 Noida");
-}
+const areaDisplay={
+"greater-noida":"Greater Noida",
+"indirapuram":"Indirapuram Ghaziabad",
+"sector-18-noida":"Sec 18 Noida",
+"sector-50-noida":"Sec 50 Noida",
+"vaishali":"Vaishali Ghaziabad",
+"vasundhara":"Vasundhara Ghaziabad"
+};
 
-function makeHTML(PB,PA,areaSlug){
-const displayArea = prettyArea(areaSlug);
-const seoTitle = `${PB} Chimney Service Repair ${displayArea} Cleaning Installation ${PHONE}`;
+function makeHTML(PB,areaSlug){
+const displayArea = areaDisplay[areaSlug];
 const society = areaData[areaSlug];
+const seoTitle = `${PB} Chimney Service Repair ${displayArea} Cleaning Installation ${PHONE}`;
 const seoDesc = `${PB} Chimney Service Repair ${displayArea} - Deep Cleaning, Installation, Not Working, Noise Fix. Same Day Service in ${society}. 2100+ Homes Trust Us in ${displayArea}. Call ${PHONE} - Visit 299.`;
 
 return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -165,8 +161,7 @@ window.open("https://wa.me/${WA}?text="+msg,"_blank");
 </body></html>`;
 }
 brands.forEach(b=>{areas.forEach(a=>{
-const PA=a.replace(/-/g,' ').replace(/\b\w/g,l=>l.toUpperCase());
 const PB=b.charAt(0).toUpperCase()+b.slice(1);
-fs.writeFileSync(b+"-chimney-service-"+a+".html",makeHTML(PB,PA,a));
+fs.writeFileSync(b+"-chimney-service-"+a+".html",makeHTML(PB,a));
 });});
-console.log("Done 60 pages - Title Now: Brand Chimney Service Repair Area Cleaning Installation 8796284796");
+console.log("Done 60 pages - Title Now: Brand Chimney Service Repair Area Cleaning Installation 8796284796 - Noida Wala Noida Ghaziabad Wala Ghaziabad");
